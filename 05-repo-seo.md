@@ -1,56 +1,54 @@
-# 仓库 SEO 与元信息
+# 仓库怎么设置
 
-GitHub 仓库本身是一个高权重页面。仓库名、About、Topics、README 前 3 行，共同决定它在 GitHub 站内搜索和 Google 的可见度。
-
----
-
-## 一、仓库名候选
-
-名字要能被人搜到，也要像人话。优先「关键词 + 用途」，不要用纯品牌名。
-
-| 候选 | 说明 |
-|---|---|
-| `tiktok-shop-seller-toolkit` | 关键词最全，搜 `tiktok shop` 的人容易命中，推荐 |
-| `tiktok-shop-tools` | 短、好记，适合以免费工具为主的仓库 |
-| `tiktok-shop-calculators` | 只做计算器时最精准 |
-| `starway-global` | 纯品牌名，适合作为组织/品牌主页仓库，SEO 弱 |
-| `cross-border-ecommerce-tools` | 泛关键词，能吃到跨境流量但不精准 |
-
-建议：**一个关键词仓库（主推广）+ 一个品牌仓库（品牌沉淀）**，互相在 README 里链接。
+GitHub 仓库本身不算个高权重页面，但搜得到搜不到，差别挺大。名字、简介、标签、README 前几行，基本上决定了它能不能被搜到。
 
 ---
 
-## 二、About 描述（GitHub 右侧那句话）
+## 仓库名
 
-限制约 160 字符，超了会被截断。把最重要的信息放前半句。
+能被人搜到，又得像人话。别用纯品牌名，那玩意儿没人搜。
 
-**中文版（推荐）**
+`tiktok-shop-seller-toolkit` —— 关键词最全，搜 tiktok shop 的人容易撞上。推荐这个。
 
-```text
-TikTok Shop 卖家运营后台：多店铺数据、订单履约、AI 素材、选品榜单、GMV Max 投流，含 5 个免登录免费算账工具。
+`tiktok-shop-tools` —— 短好记，适合以免费工具为主的仓库。
+
+`tiktok-shop-calculators` —— 只做计算器的话最精准。
+
+`starway-global` —— 纯品牌，适合当组织主页，SEO 基本为零。
+
+建议开两个：一个关键词仓库当主推广，一个品牌仓库攒东西，互相在 README 里链一下。
+
+---
+
+## 简介
+
+GitHub 右边那句话，160 字符左右，超了会截断。重要的放前面。
+
+中文：
+
+```
+TikTok Shop 卖家运营后台：多店铺数据、订单发货、AI 素材、选品榜单、GMV Max 投流，含五个免费算账工具。
 ```
 
-**备选**
-
-```text
-免费 TikTok 跨境工具 + 多店铺运营后台。利润、保本 ROAS、ROI、定价计算器与 Hook 生成器，免登录可用。
+```
+免费 TikTok 跨境工具 + 多店铺运营后台。利润、保本 ROAS、ROI、定价计算器与 Hook 生成器免登录可用。
 ```
 
-**英文版**（如果要面向海外用户）
+英文：
 
-```text
+```
 TikTok Shop seller ops console: multi-shop dashboards, order fulfillment, AI creative tools, product research and GMV Max ads. Includes 5 free no-login calculators.
 ```
 
-**Website 字段**：填 `https://www.fz567.cn`
+Website 填 `https://www.fz567.cn`。
 
 ---
 
-## 三、Topics（最多 20 个）
+## 标签
 
-Topics 是 GitHub 站内检索的主要入口。按「平台词 → 场景词 → 技术词」排序。
+最多 20 个。按「平台词 → 场景词 → 技术词」排，别一股脑堆。
 
-```text
+```
 tiktok-shop
 tiktok-shop-api
 ecommerce
@@ -73,98 +71,74 @@ temu
 nextjs
 ```
 
-注意事项：
-
-- 一次不要堆 20 个不相关的词，Topics 的相关性会影响排序
-- 不要用 `tiktok` 单独一个词硬蹭，容易被判定为无关
-- 中文词组在 GitHub Topics 里搜不到，一律用英文
+两点：别塞无关热词，相关性影响排序；中文词组在 Topics 里搜不到，一律写英文。
 
 ---
 
-## 四、徽章（shields.io）
+## 徽章
 
-只放**真实**的徽章。放虚假的 build passing / 下载量会被指出来。
+只放真的。假的 build passing 或者下载量，一眼就看出来。
 
 ```markdown
-![Platform](https://img.shields.io/badge/platform-TikTok%20Shop-000000?style=flat-square)
-![Free tools](https://img.shields.io/badge/free%20tools-5%20no%20login-brightgreen?style=flat-square)
-![Official API](https://img.shields.io/badge/data-official%20API-lightgrey?style=flat-square)
-![Lang](https://img.shields.io/badge/lang-中文-red?style=flat-square)
-![Updated](https://img.shields.io/badge/updated-2026--11-blue?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-TikTok%20Shop-black?style=flat-square)
+![Free](https://img.shields.io/badge/free%20tools-5-brightgreen?style=flat-square)
+![Lang](https://img.shields.io/badge/docs-中文-red?style=flat-square)
 ```
 
-如果要放 License 徽章，**先在仓库里真的加一个 `LICENSE` 文件**（MIT 或 Apache-2.0），否则徽章指向一个不存在的文件。
+要放 License 徽章，先真的加个 `LICENSE` 文件（MIT 就行），不然徽章指向一个不存在的东西。
 
 ---
 
-## 五、README 关键词布局
+## README 里关键词怎么放
 
-GitHub 的 README 会被搜索引擎索引。布局原则：**关键词出现在该出现的地方，不要堆。**
+原则是「该出现的地方出现，别堆」。堆得多了读起来不像人话，搜索引擎现在也识别得出来。
 
-| 位置 | 放什么 | 说明 |
-|---|---|---|
-| 一级标题 | 品牌 + 品类 | `星途出海 · TikTok Shop 卖家运营工具箱` |
-| 首段 100 字 | 核心关键词自然出现 1–2 次 | `TikTok Shop`、`多店铺`、`跨境卖家` |
-| 各二级标题 | 场景关键词 | 选品、投流、GMV Max、利润计算 |
-| 工具表格 | 每个工具的名称 + 一句话用途 | 让「利润计算器」这类长尾词有落点 |
-| 结尾链接区 | 官网 / 工具页 / 博客 | 保证每个页面都有入口 |
+- 一级标题：品牌 + 品类，比如「星途出海 · TikTok Shop 卖家的运营后台」
+- 开头一百字：核心词自然出现一两次就行
+- 小标题：用场景词，选品、投流、GMV Max、利润计算
+- 工具那一段：每个工具名字 + 一句话用途，长尾词就有落点了
+- 结尾：官网、工具页、博客都留入口
 
-**要避免的：**
-
-- 首段塞 10 个关键词，读起来不像人话
-- 用 HTML 注释藏关键词，GitHub 会渲染但搜索引擎降权
-- 同一段重复出现同一个词 5 次以上
+别做的事：第一段塞十个关键词；用 HTML 注释藏词；同一段把同一个词重复五遍。
 
 ---
 
-## 六、文件与目录建议
+## 目录长什么样
 
-```text
+```
 tiktok-shop-seller-toolkit/
-├── README.md              # 用 01-main-readme.md
-├── LICENSE                # MIT 或 Apache-2.0
+├── README.md
+├── LICENSE
 ├── docs/
-│   ├── faq.md             # 用 04-faq.md 的一部分
-│   └── tools.md           # 五个免费工具的详细用法
+│   ├── faq.md
+│   └── tools.md
 ├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   └── feedback.md    # 用 03-snippets.md 里的 Issue 模板
-│   └── workflows/
+│   └── ISSUE_TEMPLATE/
+│       └── feedback.md
 └── screenshots/
     ├── dashboard.png
     ├── ai-tools.png
     └── tools.png
 ```
 
-有 `docs/`、`LICENSE`、Issue 模板、截图的仓库，看起来是认真维护的，转化率明显高于只有一个 README 的空壳。
+有 docs、有 LICENSE、有 Issue 模板、有截图的仓库，看起来是有人在维护的。只有一个 README 的空壳，转化率差很多。
 
 ---
 
-## 七、截图清单（需要你补充真图）
+## 截图
 
-README 里放 2–3 张真实截图，比十段文字有效。建议：
+放两三张真的，比十段文字有用。
 
-1. **多店铺看板** —— 体现「一屏管多店」，注意打码店铺名与真实 GMV
-2. **免费工具页** —— 体现「免登录就能用」，最好带计算结果
-3. **AI 工作台** —— 体现素材生产能力
+建议拍：多店铺看板（体现一屏管多店）、免费工具页（体现免登录能直接用，最好带算出来的结果）、AI 工作台（体现素材能批量出）。
 
-注意：
-
-- 截图里的真实店铺名、订单号、买家信息必须打码
-- 图片放仓库内 `screenshots/`，不要外链到官网（外链会失效，也不被 GitHub 缓存）
-- 单张控制在 500KB 内，用 PNG 或 WebP
+注意几点：真实店铺名、订单号、买家信息必须打码；图片放仓库里，别外链官网（外链会失效，GitHub 也不缓存）；单张压到 500KB 以内。
 
 ---
 
-## 八、发布节奏建议
+## 发版节奏
 
-GitHub 对「一次性建仓然后不管」的仓库几乎不给流量。保持活跃的做法：
+建完仓就不管，GitHub 基本不给流量。让它看起来还活着：
 
-| 频率 | 动作 |
-|---|---|
-| 每周 | 更新 README 里的工具列表或 FAQ；发一条 Release 说明 |
-| 每两周 | 新增一篇 `docs/` 下的使用指南，并在 README 加链接 |
-| 每月 | 整理一次「本期新增工具 / 修复问题」的 Discussion |
-| 按需 | 回复 Issue，即使是「暂不支持」也要回 |
+一周更新一次 README 的工具列表或 FAQ，顺手发个 Release 说明。两周左右往 docs 里加一篇使用指南，README 里挂个链接。一个月整理一次「这次加了什么、修了什么」的 Discussion。有人提 Issue 就回，哪怕是「暂时不支持」也要回一句。
 
-Release 不需要真有版本号，用日期标签即可（如 `2026.11`）。
+Release 不用真有什么版本号，用日期也行，`2026.11` 这样。
